@@ -11,7 +11,7 @@ pixelSection.style.display = 'inline-block';
 let body = document.getElementsByTagName('body')[0];
 body.append(pixelSection);
 //creating the for loop in order to create and add multiple divs to the pixelSection
-for (var i = 0; i < 1600; i++) {
+for (var i = 0; i < 1521; i++) {
   let div = document.createElement('div');
   pixelSection.append(div);
   div.className = "pixel";
@@ -20,49 +20,73 @@ for (var i = 0; i < 1600; i++) {
   div.style.border = "1px solid black";
   div.style.float = 'left';
 }
-// let newPalette = document.createElement('newPalette');
-// body.appen(newPalette);
-let palette = document.createElement('palette');
-pixelSection.append(palette);
-palette.style.border = "1px solid black";
-palette.style.height = '160px';
-palette.style.width = '600px';
-palette.style.borderRadius = '400px';
-palette.style.float = "left";
-palette.styl
-palette.style.padding = "20px";
-palette.style.marginTop = '40px';
-palette.style.marginLeft = 'auto';
-palette.style.marginRight = 'auto';
+let paletteSection = document.createElement('section');
+body.append(paletteSection);
+    paletteSection.className = 'newSection'
+// let palette = document.createElement('palette');
+//
+// paletteSection.append(palette);
+// palette.className = 'paly';
+// palette.style.border = "1px solid black";
+// palette.style.height = '120px';
+// palette.style.width = '400px';
+// palette.style.borderRadius = '400px';
+// palette.style.float = "left";
+// palette.style.padding = "20px";
+// palette.style.marginTop = '40px';
+// palette.style.marginLeft = 'auto';
+// palette.style.marginRight = 'auto';
 
-for (var i = 0; i < 12; i++) {
-  let spot = document.createElement('spot');
-  palette.append(spot);
+
+var colorArray = ["red", "blue", "green", "yellow", "purple", "pink", "orange", "brown", "black", "grey"];
+
+for (var i = 0; i < colorArray.length; i++) {
+  let spot = document.createElement('div');
+  var styleColor = colorArray[i];
+  spot.style.backgroundColor = styleColor;
+  spot.className = 'spotty';
+  spot.style.display = 'inline-block'
+  spot.style.width = '40px';
+  spot.style.height = '40px';
+  spot.style.float = 'left'
+  paletteSection.append(spot);
 
 }
-
-div.addEventListener('click', function(){
-  if (event.target.id === 'div')
-  event.target.style.backgroundColor = "red";
-
+function picked () {
+  let pick= event.target
+  let pickedColor= pick.style.backgroundColor
+  console.log(pickedColor);
+  return pickedColor
+}
+paletteSection.addEventListener('click', function(){
+  let coloring=picked()
+  pixelSection.addEventListener('click', function(){
+    event.target.style.backgroundColor=coloring
+  })
 })
-
-  //
-  // var canvasDiv = document.getElementById('canvasDiv');
-  // canvas = document.createElement('canvas');
-  // canvas.setAttribute('width', canvasWidth);
-  // canvas.setAttribute('height', canvasHeight);
-  // canvas.setAttribute('id', 'canvas');
-  // canvasDiv.appendChild(canvas);
-  // if(typeof G_vmlCanvasManager != 'undefined') {
-  // 	canvas = G_vmlCanvasManager.initElement(canvas);
-  // }
-  // context = canvas.getContext("2d");
-
-// canvas.id = "CursorLayer";
-// canvas.width = 20%;
-// canvas.height = 20%;
+// var userChoice = ""
+// pixelSection.addEventListener('click', function(event){
+// event.target.style.backgroundColor = "red";
 //
-// canvas.style.position = "absolute";
-// canvas.style.border = "1px solid";
-// //
+// })
+// var btnEvent = function (event) {
+//     if (event.type == 'click') {
+//         btnEvent['storedColor'] = event.target.style.backgroundColor;
+//         event.target.style.backgroundColor = someColorWhilePressed;
+ //
+ // paletteSection.addEventListener('click', function(event){
+ //  var storedColor = event.target;
+ //  let pickedColor = storedColor.backgroundColor;
+
+  // var btnEvent = function (event) {
+  //     if (event.type == 'click') {
+  //         btnEvent['storedColor'] = event.target.style.backgroundColor;
+  //         event.target.style.backgroundColor = someColorWhilePressed;
+// var selectedColor = {
+//   color: 'black'
+// }
+// paletteSection.addEventListener('click', function() {
+//   selectedColor = event.target.style.backgroundColor;
+// function objectifyColor(eventColor) {
+//   if (eventColor !== selectedColor['color']) {
+//     selectedColor['color'] = eventColor;
