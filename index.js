@@ -1,7 +1,7 @@
 let pixelSection = document.createElement('section');
 pixelSection.style.width = '480px';
 pixelSection.style.height = '480px';
-pixelSection.style.border = '1px solid black';
+// pixelSection.style.border = '1px solid black';
 pixelSection.style.padding = '1px';
 pixelSection.style.display = 'inline-block';
 pixelSection.style.marginLeft = '20%';
@@ -54,29 +54,3 @@ paletteSection.addEventListener('click', function(){
     event.target.style.backgroundColor=coloring
   })
 })
-// var userChoice = ""
-// pixelSection.addEventListener('click', function(event){
-// event.target.style.backgroundColor = "red";
-//
-// })
-// var btnEvent = function (event) {
-//     if (event.type == 'click') {
-//         btnEvent['storedColor'] = event.target.style.backgroundColor;
-//         event.target.style.backgroundColor = someColorWhilePressed;
- //
- // paletteSection.addEventListener('click', function(event){
- //  var storedColor = event.target;
- //  let pickedColor = storedColor.backgroundColor;
-
-  // var btnEvent = function (event) {
-  //     if (event.type == 'click') {
-  //         btnEvent['storedColor'] = event.target.style.backgroundColor;
-  //         event.target.style.backgroundColor = someColorWhilePressed;
-// var selectedColor = {
-//   color: 'black'
-// }
-// paletteSection.addEventListener('click', function() {
-//   selectedColor = event.target.style.backgroundColor;
-// function objectifyColor(eventColor) {
-//   if (eventColor !== selectedColor['color']) {
-//     selectedColor['color'] = eventColor;
