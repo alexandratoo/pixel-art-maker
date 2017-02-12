@@ -4,14 +4,13 @@ pixelSection.style.height = '480px';
 pixelSection.style.border = '1px solid black';
 pixelSection.style.padding = '1px';
 pixelSection.style.display = 'inline-block';
+pixelSection.style.marginLeft = '20%';
+pixelSection.style.marginRight = '10%'
 
-// pixelSection.setAttribute('class', 'pixel');
-// pixelSection.setAttribute('width', canvasWidth);
-// canvas.setAttribute('height', canvasHeight);
 let body = document.getElementsByTagName('body')[0];
 body.append(pixelSection);
 //creating the for loop in order to create and add multiple divs to the pixelSection
-for (var i = 0; i < 1521; i++) {
+for (var i = 0; i < 1600; i++) {
   let div = document.createElement('div');
   pixelSection.append(div);
   div.className = "pixel";
@@ -23,22 +22,10 @@ for (var i = 0; i < 1521; i++) {
 let paletteSection = document.createElement('section');
 body.append(paletteSection);
     paletteSection.className = 'newSection'
-// let palette = document.createElement('palette');
-//
-// paletteSection.append(palette);
-// palette.className = 'paly';
-// palette.style.border = "1px solid black";
-// palette.style.height = '120px';
-// palette.style.width = '400px';
-// palette.style.borderRadius = '400px';
-// palette.style.float = "left";
-// palette.style.padding = "20px";
-// palette.style.marginTop = '40px';
-// palette.style.marginLeft = 'auto';
-// palette.style.marginRight = 'auto';
 
 
-var colorArray = ["red", "blue", "green", "yellow", "purple", "pink", "orange", "brown", "black", "grey"];
+
+var colorArray = ["red", "blue", "green", "yellow", "purple", "pink", "orange", "brown", "black", "grey", "aqua", "lime", "magenta", "teal", "blueviolet", "gold", "greenyellow", "plum", "navy"];
 
 for (var i = 0; i < colorArray.length; i++) {
   let spot = document.createElement('div');
@@ -48,7 +35,10 @@ for (var i = 0; i < colorArray.length; i++) {
   spot.style.display = 'inline-block'
   spot.style.width = '40px';
   spot.style.height = '40px';
-  spot.style.float = 'left'
+  spot.style.float = 'left';
+  spot.style.borderRadius = '2px solid black'
+  spot.style.marginLeft = '1%';
+  // spot.style.marginRight = '10%'
   paletteSection.append(spot);
 
 }
